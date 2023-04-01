@@ -1,0 +1,11 @@
+<div class="login-form" *ngIf="formLogin" [formGroup]="formLogin">
+<mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="Ingresa tu correo" formControlName="email"/>
+</mat-form-field>
+<mat-form-field>
+    <mat-label>Contraseña</mat-label>
+    <input matInput placeholder="Ingresa tu constraseña" formControlName="password" type="password"/>
+</mat-form-field>
+<button mat-stroked-button color="accent" [disabled]="formLogin.invalid || isLoading"  (click)="loginClick()">Ingresar</button>
+</div>
